@@ -108,19 +108,9 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
-# vagrant shortcuts
-alias vmmaster="cd ~/vagrant && vagrant ssh master"
-alias vmslave="cd ~/vagrant && vagrant ssh slave"
-
-alias xhprof_enable='export XHPROF_PROFILE=1'
-alias xhprof_disable='unset XHPROF_PROFILE'
-
 # encoding conversion
 alias toLatin1="iconv --from-code=UTF-8 --to-code=Windows-1252"
 alias toUtf8="iconv --from-code=Windows-1252 --to-code=UTF-8"
-
-# php cli debug, needs specific ip
-alias php-debug="QUERY_STRING=\"start_debug=1&debug_host=192.168.240.1,127.0.0.1&use_remote=1&debug_port=10137&debug_stop=1\" php"
 
 # ip2long wrapper
 alias ip2long="php -r'if(!isset(\$argv[1])) die(\"Usage: ip2long IP\n\"); echo ip2long(\$argv[1]).\"\n\";'"

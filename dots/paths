@@ -1,0 +1,6 @@
+export PATH=.:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:/bin/:/usr/bin:/sbin:/usr/sbin
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH"
